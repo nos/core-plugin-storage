@@ -1,10 +1,10 @@
 {
   "private": true,
-  "name": "@arkecosystem/name",
-  "description": "Provides ... for Ark Core",
+  "name": "@nosplatform/storage",
+  "description": "Provides SQLite + TypeORM storage for Ark Core",
   "version": "0.0.1",
   "contributors": [
-    "Your Name <your@domain.io>"
+    "Dean van Dugteren <dean@nos.io>"
   ],
   "license": "MIT",
   "main": "dist/index.js",
