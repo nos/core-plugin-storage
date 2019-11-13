@@ -2,7 +2,7 @@
   "private": true,
   "name": "@nosplatform/storage",
   "description": "Provides SQLite + TypeORM storage for Ark Core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "contributors": [
     "Dean van Dugteren <dean@nos.io>"
   ],
@@ -28,7 +28,15 @@
     "updates": "../../node_modules/npm-check-updates/bin/npm-check-updates -a"
   },
   "dependencies": {
-    "@arkecosystem/core-interfaces": "^2.5.7"
+    "@arkecosystem/core-container": "^2.6.0-next.2",
+    "@arkecosystem/core-http-utils": "^2.6.0-next.2",
+    "@arkecosystem/core-interfaces": "^2.6.0-next.2",
+    "@arkecosystem/crypto": "^2.6.0-next.2",
+    "bytebuffer": "^5.0.1",
+    "queue": "^6.0.1",
+    "reflect-metadata": "0.1.13",
+    "sqlite3": "^4.1.0",
+    "typeorm": "^0.2.18"
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.5.0",
