@@ -2,10 +2,10 @@ import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 
 @Entity()
 export class Round extends BaseEntity {
-    @PrimaryColumn()
+    @PrimaryColumn("int")
     public id: number;
 
-    @Column()
+    @Column("varchar")
     public topDelegates: string;
 
     @Column("bigint")

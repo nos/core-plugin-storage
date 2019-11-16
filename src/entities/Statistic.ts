@@ -5,9 +5,9 @@ export class Statistic extends BaseEntity {
     @PrimaryGeneratedColumn()
     public id: number;
 
-    @Column()
+    @Column("varchar")
     public name: string;
 
-    @Column()
+    @Column("varchar")
     public value: string;
 }

@@ -5,14 +5,14 @@ export class Stake extends BaseEntity {
     @PrimaryGeneratedColumn()
     public id: number;
 
-    @Column({ length: 64 })
+    @Column("varchar", { length: 64 })
     public stakeKey: string;
 
-    @Column({
+    @Column("varchar", {
         length: 34,
     })
     public address: string;
 
-    @Column("integer")
+    @Column("int")
     public redeemableTimestamp: number;
 }
