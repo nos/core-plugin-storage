@@ -24,6 +24,8 @@ Add the plug-in to your network's `plugins.js` after the postgres module:
 ...
 ```
 
+Delete the entities (not `index.ts` and `tsconfig.json`) from the `entities` dir as these are native to the nOS blockchain.
+
 ## Usage
 
 Create [TypeORM entities](https://typeorm.io/#/entities/column-types-for-sqlite--cordova--react-native--expo) into the plugin's `entities` directory.
