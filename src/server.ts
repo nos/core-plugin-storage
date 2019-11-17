@@ -1,28 +1,11 @@
 import { createServer, mountServer } from "@arkecosystem/core-http-utils";
 import { notFound } from "@hapi/boom";
-import { Round, Statistic } from "./entities";
+import { Statistic } from "./entities";
 
 export const startServer = async config => {
     const server = await createServer({
         host: config.host,
         port: config.port,
-    });
-
-    // Round Data
-    server.route({
-        method: "GET",
-        path: "/round/{id}",
-        async handler(request, h) {
-            const id: number = Number(request.params.id);
-            const round = await Round.findOne({ id });
-            const response: any = round;
-            if (round) {
-                response.topDelegates = round.topDelegates.split(",");
-                return response;
-            } else {
-                return notFound();
-            }
-        },
     });
 
     // Statistics

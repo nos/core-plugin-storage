@@ -14,7 +14,7 @@ const qp = queue();
 qp.concurrency = 1;
 
 // Entities
-import { Round, Stake, Statistic } from "./entities";
+import { Statistic } from "./entities";
 
 // Core plugins
 const logger = app.resolvePlugin<Logger.ILogger>("logger");
@@ -39,7 +39,7 @@ export const plugin: Container.IPluginDescriptor = {
             type: "sqlite",
             database: dbPath,
             // Import entities to connection
-            entities: [Stake, Statistic, Round],
+            entities: [Statistic],
             synchronize: true,
         });
 
