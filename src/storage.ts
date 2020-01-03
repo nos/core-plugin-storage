@@ -45,7 +45,7 @@ export const plugin: Container.IPluginDescriptor = {
             synchronize: true,
         });
 
-        server = await startServer({ host: "0.0.0.0", port: 2053 });
+        server = await startServer({ host: options.host, port: options.port, cors: options.cors });
     },
     async deregister(container: Container.IContainer, options) {
         container.resolvePlugin<Logger.ILogger>("logger").info(`Deregistering Storage Plug-in.`);
