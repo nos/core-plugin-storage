@@ -14,7 +14,7 @@ export const startServer = async config => {
     // Round Data
     server.route({
         method: "GET",
-        path: "/round/{id}",
+        path: "/api/v1/round/{id}",
         async handler(request, h) {
             const id: number = Number(request.params.id);
             const round = await Round.findOne({ id });
@@ -31,7 +31,7 @@ export const startServer = async config => {
     // Statistics
     server.route({
         method: "GET",
-        path: "/stat/{name}",
+        path: "/api/v1/stat/{name}",
         async handler(request, h) {
             const stats = await Statistic.findOne({ name: request.params.name });
             if (stats) {
@@ -45,7 +45,7 @@ export const startServer = async config => {
     // Statistics
     server.route({
         method: "GET",
-        path: "/stats",
+        path: "/api/v1/stats",
         async handler(request, h) {
             const stats = await Statistic.find();
             if (stats) {
