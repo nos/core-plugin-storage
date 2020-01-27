@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@nosplatform/storage",
   "description": "Provides SQLite + TypeORM storage for Ark Core",
   "version": "0.0.2",
@@ -28,10 +27,10 @@
     "updates": "../../node_modules/npm-check-updates/bin/npm-check-updates -a"
   },
   "dependencies": {
-    "@arkecosystem/core-container": "^2.6.0-next.2",
-    "@arkecosystem/core-http-utils": "^2.6.0-next.2",
-    "@arkecosystem/core-interfaces": "^2.6.0-next.2",
-    "@arkecosystem/crypto": "^2.6.0-next.2",
+    "@arkecosystem/core-container": "^2.6.0-next.9",
+    "@arkecosystem/core-http-utils": "^2.6.0-next.9",
+    "@arkecosystem/core-interfaces": "^2.6.0-next.9",
+    "@arkecosystem/crypto": "^2.6.0-next.9",
     "bytebuffer": "^5.0.1",
     "queue": "^6.0.1",
     "reflect-metadata": "0.1.13",
@@ -54,7 +53,12 @@
     "cross-env": "^6.0.0",
     "del-cli": "^3.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "jest": {
-    "preset": "../../jest-preset.json"
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   }
 }
