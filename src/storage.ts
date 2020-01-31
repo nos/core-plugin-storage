@@ -13,7 +13,7 @@ const qp = queue();
 qp.concurrency = 1;
 
 // Entities
-import { Statistic, Round } from "./entities";
+import { Statistic, Round, Delegate } from "./entities";
 
 // Core plugins
 
@@ -41,7 +41,7 @@ export const plugin: Container.IPluginDescriptor = {
             type: "sqlite",
             database: dbPath,
             // Import entities to connection
-            entities: [Statistic, Round],
+            entities: [Statistic, Round, Delegate],
             synchronize: true,
         });
 
