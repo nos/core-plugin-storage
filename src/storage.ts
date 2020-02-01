@@ -6,6 +6,7 @@ import "reflect-metadata";
 import { createConnection, getConnection } from "typeorm";
 import { defaults } from "./defaults";
 import { startServer } from "./server";
+import { createHandyClient } from "handy-redis";
 
 // Queue
 import queue from "queue";
@@ -36,6 +37,9 @@ export const plugin: Container.IPluginDescriptor = {
 
         container.resolvePlugin<Logger.ILogger>("logger").info(`Registering Storage Plug-in.`);
         container.resolvePlugin<Logger.ILogger>("logger").info(`Storage Plug-in Database Path: ${dbPath}`);
+
+        const redis = createHandyClient();
+        await redis.flushdb();
 
         await createConnection({
             type: "sqlite",
