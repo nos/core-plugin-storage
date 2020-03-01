@@ -20,7 +20,6 @@ export const startServer = async config => {
             const round = await Round.findOne({ id });
             const response: any = round;
             if (round) {
-                response.topDelegates = round.topDelegates.split(",");
                 return response;
             } else {
                 return notFound();

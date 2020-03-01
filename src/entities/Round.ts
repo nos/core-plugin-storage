@@ -6,9 +6,6 @@ export class Round extends BaseEntity {
     public id: number;
 
     @Column("varchar")
-    public topDelegates: string;
-
-    @Column("varchar")
     public forged: string;
 
     @Column("varchar")
